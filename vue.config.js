@@ -1,7 +1,7 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
   transpileDependencies: true,
-  lintOnSave:false,
+  lintOnSave: false,
   configureWebpack: config => {
     config.module.rules.filter(rule => {
       return rule.test.toString().indexOf("scss") !== -1;

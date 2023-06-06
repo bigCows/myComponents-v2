@@ -1,7 +1,7 @@
 <template>
     <div>
-        <button @click="goBack">{{this.back}}</button>
-        <div>layout</div>        
+        layout
+        <el-button @click="$router.go(-1)">{{this.back}}</el-button>
     </div>
 </template>
 

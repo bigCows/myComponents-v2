@@ -8,9 +8,9 @@
 <script>
 import router from '@/router';
 export default {
-    name: '',    
+    name: 'myButton',    
     props: {
-
+    
     },
     data() {
         return {

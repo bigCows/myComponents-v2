@@ -1,13 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Dashborad from '../views/dashborad'
+import Dashboard from '../views/dashboard'
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: Dashborad
+    component: Dashboard
   },
   {
     path: '/layout',
