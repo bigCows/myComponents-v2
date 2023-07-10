@@ -1,10 +1,5 @@
 <template>
   <div class="layout-container">
-    <my-dialog 
-    :visible.sync="dialogShow" 
-    :width="500"
-    >
-    </my-dialog>
     <div style="margin:100px;width:50%;border:1px solid red">
       <my-table 
         :tableData="tableData" 
@@ -46,6 +41,9 @@
     </el-button>
     <el-button @click="useVuex">
       vuex
+    </el-button>
+    <el-button @click="login">
+      login
     </el-button>
 
   </div>
@@ -126,6 +124,9 @@ export default {
     }
   },
     methods: {
+      // login() {
+      //   store.commit('stateUserInfo',{name:'ls',age:18,permission:['a','b','c']})
+      // },
         useVuex() {
         store.dispatch('stateNum',10)
         // store.commit('stateUser','ls')

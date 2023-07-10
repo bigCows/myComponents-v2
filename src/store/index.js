@@ -6,12 +6,17 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     user: '张三' ,
-    num: 1
+    num: 1,
+    userInfo: {}
 
   },
   getters: {
   },
   mutations: {
+    stateUserInfo(state,payload) {
+      state.userInfo = payload
+      console.log(state.userInfo);
+    },
     stateUser (state, payload) {
       state.user = payload.isName
     },

@@ -1,5 +1,5 @@
   <template>
-      <div>
+      <div class="my-table-container">
         <el-table
         ref="myTable"
         class="my-table"
@@ -30,7 +30,7 @@
       </el-table-column>
         </el-table>
 
-        <div>
+        <div class="pagination">
           <el-pagination
             :current-page.sync="currentPage"
             :page-size.sync="pageSize"
@@ -139,6 +139,13 @@
   }
   </script>
 
-  <style scoped lang="">
+  <style scoped>
 
+  .my-table-container {
+    padding-bottom: 50px;
+  }
+  .pagination {
+    float: right;
+    margin-top: 10px;
+  }
   </style>

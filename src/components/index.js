@@ -1,12 +1,17 @@
-import myButton from './my-button'
-import myDialog from './my-dialog'
-import myTable from './my-table'
+// 引入所有组件
+const isComponents = require.context('./', true, /\.vue$/)
+
+
+// 获取组件的名字
+const componentsKeys = isComponents.keys().map(item => item.replace(/^\.\//, '').replace(/\.vue$/, ''))
+// 获取组件实例
+const componentsName = isComponents.keys().map(isComponents)
 
 export default {
     install(Vue) {
-        Vue.component('my-button',myButton)
-        Vue.component('my-dialog',myDialog)
-        Vue.component('my-table',myTable)
-
+        componentsKeys.forEach((item, index) => {
+            // console.log(item,componentsName[index]);
+            Vue.component(item, componentsName[index].default)
+        })
     }
 }
